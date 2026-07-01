@@ -1,42 +1,95 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafbfb;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .card {
-  padding: 2em;
+  width: 420px;
+  background: #444040;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.read-the-docs {
-  color: #888;
+.title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 8px;
+  width: 65%;
+  border: 1px solid #ebe7e7;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #555;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.filter-box {
+  margin: 15px 0;
+}
+
+.filter-box button {
+  margin: 5px;
+  background: #f1f1f1;
+  color: black;
+}
+
+.filter-box .active {
+  background: #333;
+  color: white;
+}
+
+.counter {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgb(225, 218, 218);
+}
+
+.active {
+  background: #333 !important;
+  color: rgb(53, 51, 51) !important;
 }
