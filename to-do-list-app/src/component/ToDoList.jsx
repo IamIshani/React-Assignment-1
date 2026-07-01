@@ -1,9 +1,15 @@
-function ToDoList(){
+import ToDoItem from "./ToDoItem";
+
+function ToDoList({ todos }) {
     return (
-        <>
-            <h1>To Do List Component</h1>
-        </>
-    )
+        <div>
+            {
+                todos.map((todo) => {
+                    return <ToDoItem key={todo.id} todo={todo} />;
+                })
+            }
+        </div>
+    );
 }
 
 export default ToDoList;
